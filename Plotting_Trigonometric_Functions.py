@@ -1,5 +1,4 @@
-# Plot the following function for −15 ≤ x ≤ 15:
-# y = [cos(x)] / [1 + (x^2)/5 ]
+# Plot the following function for −15 ≤ x ≤ 15: y = [cos(x)] / [1 + (x^2)/5 ]
 # Include enough points so that the curve you plot appears smooth. Draw thin gray lines, one horizontal at y = 0 and the other vertical at x = 0. Both lines should appear behind the function. Label the axes x and y.
 
 import numpy as np
