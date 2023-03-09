@@ -1,3 +1,5 @@
+# To ascertain how well f (t) models the the y vs. time data, plot f (t) as a smooth line on the same plot. To plot f (t) as a smooth line, you will need to create a new NumPy t array separate from the time data. Make the line for f (t) pass behind the data points
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as tck
@@ -5,16 +7,16 @@ import matplotlib.ticker as tck
 file = open("C:/Users/talon/Documents/PyScripts/lauren_john_data.txt") #Change to your Directory where your file is stored
 
 for i in range(5):                                          #Skips first 5 lines
-    line = file.readline()
+    line = file.readline()                                  #Reads entire line
 
 t = []                                                      #Array of t values from file
 d = []                                                      #Array of d values from file
 dy = []                                                     #Array of uncertainties values from file
 for line in file.readlines():                               #Imports data to be used from file
-    currentline = line.split()
-    t.append(float(currentline[0]))
-    d.append(float(currentline[1]))
-    dy.append(float(currentline[2])) 
+    currentline = line.split()                              #Creates a list of all the objects read in the line
+    t.append(float(currentline[0]))                         #Ads the first object read in the line to array t
+    d.append(float(currentline[1]))                         #Ads the second object read in the line to array d
+    dy.append(float(currentline[2]))                        #Ads the third object read in the line to array dy
 
 plt.figure(4, figsize=(6,4))                                        #Creates Image 4 parameters
 plt.xlabel("Time (s)") 
